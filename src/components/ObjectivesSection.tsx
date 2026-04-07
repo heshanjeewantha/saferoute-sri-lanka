@@ -1,10 +1,26 @@
 import { Eye, Gauge, AlertCircle, Bell } from "lucide-react";
 
 const objectives = [
-  { icon: Eye, title: "Detect Driver Fatigue", desc: "Using computer vision and facial landmark detection to identify drowsiness and microsleep events in real-time." },
-  { icon: Gauge, title: "Monitor Overspeeding", desc: "GPS-based speed tracking with geofenced speed limits for different road zones across the network." },
-  { icon: AlertCircle, title: "Identify Unsafe Driving", desc: "Accelerometer data analysis to detect harsh braking, sudden acceleration, and dangerous cornering patterns." },
-  { icon: Bell, title: "Real-Time Alerts", desc: "Instant SMS and push notifications to transport authorities when safety thresholds are breached." },
+  {
+    icon: Eye,
+    title: "Driver Behavior Monitoring",
+    desc: "Detect drowsiness, yawning, head turns, phone usage, and seat belt compliance using MediaPipe, YOLOv8, and temporal LSTM classification.",
+  },
+  {
+    icon: Gauge,
+    title: "Context-Aware Violation Detection",
+    desc: "Use segmentation, object detection, and monocular depth estimation on edge devices to identify lane departures, unsafe distance, and traffic-aware speeding.",
+  },
+  {
+    icon: AlertCircle,
+    title: "Predictive Passenger Information",
+    desc: "Forecast bus arrival times and occupancy trends from GPS and ticketing data to provide commuters with practical, real-time planning insights.",
+  },
+  {
+    icon: Bell,
+    title: "Dynamic Safety Speed Intelligence",
+    desc: "Estimate safe operating speed from passenger load, weather, and road conditions, then trigger immediate in-cabin warning alerts when thresholds are exceeded.",
+  },
 ];
 
 const ObjectivesSection = () => (
@@ -15,7 +31,7 @@ const ObjectivesSection = () => (
           Research Objectives
         </p>
         <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-          What We Aim to Achieve
+          Core Objectives Of SafeTransit360°
         </h2>
       </div>
 
