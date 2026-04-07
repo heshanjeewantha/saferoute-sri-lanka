@@ -16,10 +16,10 @@ const pieData = [
 ];
 
 const PIE_COLORS = [
-  "hsl(214, 80%, 52%)",
-  "hsl(25, 95%, 55%)",
-  "hsl(210, 20%, 80%)",
-  "hsl(0, 70%, 60%)",
+  "hsl(0, 75%, 50%)",
+  "hsl(42, 100%, 50%)",
+  "hsl(35, 20%, 75%)",
+  "hsl(0, 60%, 70%)",
 ];
 
 const AnimatedCounter = ({ target, suffix = "%" }: { target: number; suffix?: string }) => {
@@ -51,7 +51,7 @@ const AnimatedCounter = ({ target, suffix = "%" }: { target: number; suffix?: st
   }, [target]);
 
   return (
-    <span ref={ref} className="font-display text-4xl font-bold text-primary md:text-5xl">
+    <span ref={ref} className="font-display text-3xl font-bold text-primary sm:text-4xl md:text-5xl">
       {count}
       {suffix}
     </span>
@@ -71,44 +71,44 @@ const ResultsSection = () => (
       </div>
 
       {/* Animated counters */}
-      <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div className="mt-12 grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4">
         {accuracyData.map((d) => (
           <div key={d.name} className="text-center">
             <AnimatedCounter target={d.value} />
-            <p className="mt-2 text-sm font-medium text-muted-foreground">{d.name}</p>
+            <p className="mt-2 text-xs sm:text-sm font-medium text-muted-foreground">{d.name}</p>
           </div>
         ))}
       </div>
 
       {/* Charts */}
-      <div className="mt-16 grid gap-8 lg:grid-cols-2">
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+      <div className="mt-12 sm:mt-16 grid gap-6 sm:gap-8 lg:grid-cols-2">
+        <div className="rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-sm">
           <h3 className="mb-4 font-display text-lg font-semibold text-card-foreground">
             Detection Accuracy (%)
           </h3>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={280}>
             <BarChart data={accuracyData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(214, 20%, 90%)" />
-              <XAxis dataKey="name" tick={{ fontSize: 12 }} />
-              <YAxis domain={[80, 100]} tick={{ fontSize: 12 }} />
+              <CartesianGrid strokeDasharray="3 3" stroke="hsl(35, 20%, 88%)" />
+              <XAxis dataKey="name" tick={{ fontSize: 11 }} />
+              <YAxis domain={[80, 100]} tick={{ fontSize: 11 }} />
               <Tooltip />
-              <Bar dataKey="value" fill="hsl(214, 80%, 52%)" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="value" fill="hsl(0, 75%, 50%)" radius={[8, 8, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
 
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+        <div className="rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-sm">
           <h3 className="mb-4 font-display text-lg font-semibold text-card-foreground">
             Classification Distribution
           </h3>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={280}>
             <PieChart>
               <Pie
                 data={pieData}
                 cx="50%"
                 cy="50%"
-                innerRadius={60}
-                outerRadius={100}
+                innerRadius={50}
+                outerRadius={90}
                 paddingAngle={4}
                 dataKey="value"
                 label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
@@ -124,14 +124,14 @@ const ResultsSection = () => (
       </div>
 
       {/* Comparison table */}
-      <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-        <table className="w-full text-sm">
+      <div className="mt-10 sm:mt-12 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
+        <table className="w-full text-sm min-w-[500px]">
           <thead className="bg-primary/5">
             <tr>
-              <th className="px-6 py-4 text-left font-display font-semibold text-card-foreground">Metric</th>
-              <th className="px-6 py-4 text-center font-display font-semibold text-card-foreground">Before System</th>
-              <th className="px-6 py-4 text-center font-display font-semibold text-card-foreground">After System</th>
-              <th className="px-6 py-4 text-center font-display font-semibold text-accent">Improvement</th>
+              <th className="px-4 sm:px-6 py-4 text-left font-display font-semibold text-card-foreground">Metric</th>
+              <th className="px-4 sm:px-6 py-4 text-center font-display font-semibold text-card-foreground">Before</th>
+              <th className="px-4 sm:px-6 py-4 text-center font-display font-semibold text-card-foreground">After</th>
+              <th className="px-4 sm:px-6 py-4 text-center font-display font-semibold text-accent">Change</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
@@ -142,10 +142,10 @@ const ResultsSection = () => (
               ["Driver safety score avg.", "62%", "89%", "44% ↑"],
             ].map(([metric, before, after, imp]) => (
               <tr key={metric} className="hover:bg-muted/50 transition-colors">
-                <td className="px-6 py-4 font-medium text-card-foreground">{metric}</td>
-                <td className="px-6 py-4 text-center text-muted-foreground">{before}</td>
-                <td className="px-6 py-4 text-center text-muted-foreground">{after}</td>
-                <td className="px-6 py-4 text-center font-semibold text-accent">{imp}</td>
+                <td className="px-4 sm:px-6 py-4 font-medium text-card-foreground">{metric}</td>
+                <td className="px-4 sm:px-6 py-4 text-center text-muted-foreground">{before}</td>
+                <td className="px-4 sm:px-6 py-4 text-center text-muted-foreground">{after}</td>
+                <td className="px-4 sm:px-6 py-4 text-center font-semibold text-accent">{imp}</td>
               </tr>
             ))}
           </tbody>

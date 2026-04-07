@@ -17,33 +17,33 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-foreground/60" />
 
     {/* Floating shapes */}
-    <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-accent/20 blur-3xl animate-float" />
-    <div className="absolute -bottom-20 -right-20 h-96 w-96 rounded-full bg-primary/30 blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
+    <div className="absolute -top-20 -left-20 h-48 w-48 sm:h-72 sm:w-72 rounded-full bg-accent/20 blur-3xl animate-float" />
+    <div className="absolute -bottom-20 -right-20 h-64 w-64 sm:h-96 sm:w-96 rounded-full bg-primary/30 blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
 
-    <div className="container relative z-10 mx-auto text-center">
-      <p className="animate-fade-up mb-4 inline-block rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-5 py-2 text-sm font-medium text-primary-foreground backdrop-blur-sm">
+    <div className="container relative z-10 mx-auto px-4 text-center">
+      <p className="animate-fade-up mb-4 inline-block rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium text-primary-foreground backdrop-blur-sm">
         University Research Project
       </p>
 
-      <h1 className="animate-fade-up animate-fade-up-delay-1 mx-auto max-w-4xl font-display text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
+      <h1 className="animate-fade-up animate-fade-up-delay-1 mx-auto max-w-4xl font-display text-3xl font-bold leading-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-6xl">
         Real-Time Safety Monitoring System for Sri Lanka's Public Transport Network
       </h1>
 
-      <p className="animate-fade-up animate-fade-up-delay-2 mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80 md:text-xl">
+      <p className="animate-fade-up animate-fade-up-delay-2 mx-auto mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg text-primary-foreground/80 md:text-xl">
         Enhancing Passenger Safety Through Intelligent Monitoring
       </p>
 
-      <div className="animate-fade-up animate-fade-up-delay-3 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <div className="animate-fade-up animate-fade-up-delay-3 mt-8 sm:mt-10 flex flex-col items-center justify-center gap-3 sm:gap-4 sm:flex-row">
         <a
           href="#about"
-          className="group inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 font-semibold text-accent-foreground shadow-lg transition-all hover:shadow-accent/30 hover:scale-105"
+          className="group inline-flex items-center gap-2 rounded-xl bg-accent px-6 sm:px-8 py-3 sm:py-4 font-semibold text-accent-foreground shadow-lg transition-all hover:shadow-accent/30 hover:scale-105"
         >
           <BookOpen className="h-5 w-5" />
           View Research
         </a>
         <a
           href="#system"
-          className="group inline-flex items-center gap-2 rounded-xl border border-primary-foreground/30 bg-primary-foreground/10 px-8 py-4 font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/20 hover:scale-105"
+          className="group inline-flex items-center gap-2 rounded-xl border border-primary-foreground/30 bg-primary-foreground/10 px-6 sm:px-8 py-3 sm:py-4 font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/20 hover:scale-105"
         >
           Explore System
           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
