@@ -3,18 +3,18 @@ import { AlertTriangle, Brain, ShieldCheck } from "lucide-react";
 const challenges = [
   {
     icon: AlertTriangle,
-    title: "Reckless Driving",
-    desc: "Aggressive overtaking, speeding, and ignoring traffic signals contribute to thousands of accidents annually on Sri Lankan roads.",
+    title: "Systemic Safety Gaps",
+    desc: "Sri Lanka's bus network still relies on manual supervision and post-incident CCTV review, which limits real-time intervention for passenger and driver safety.",
   },
   {
     icon: Brain,
-    title: "Driver Fatigue",
-    desc: "Long working hours without adequate rest lead to drowsy driving, a major undetected risk in public transport operations.",
+    title: "Reactive To Predictive",
+    desc: "SafeTransit360° replaces isolated monitoring with AI-powered, context-aware intelligence that predicts risk and triggers immediate alerts before incidents escalate.",
   },
   {
     icon: ShieldCheck,
-    title: "Lack of Monitoring",
-    desc: "Current systems lack real-time tracking of driver behavior, making it impossible to intervene before accidents occur.",
+    title: "Integrated IoT + Edge AI",
+    desc: "The framework combines driver monitoring, road-rule violation analysis, predictive bus tracking, and safety-speed estimation into one practical architecture for Sri Lankan public transport.",
   },
 ];
 
@@ -26,11 +26,11 @@ const AboutSection = () => (
           About the Project
         </p>
         <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-          Why Public Transport Safety Matters
+          Safety Monitoring System For Public Transport Buses In Sri Lanka
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Sri Lanka's public transport network carries millions daily, yet safety monitoring remains largely manual. 
-          Our research addresses this critical gap with AI-powered real-time monitoring to protect both passengers and drivers.
+          SafeTransit360° is an IoT-enabled research framework designed to improve safety, reliability, and commuter confidence.
+          It unifies edge-based computer vision, predictive analytics, and real-time alerts to support both bus operators and passengers.
         </p>
       </div>
 
