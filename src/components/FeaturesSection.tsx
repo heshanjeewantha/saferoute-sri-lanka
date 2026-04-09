@@ -1,4 +1,4 @@
-import { FaUserShield, FaDesktop, FaSms, FaRegFileAlt, FaChartBar, FaShieldAlt } from "react-icons/fa";
+import { FaUserShield, FaDesktop, FaTachometerAlt, FaRegFileAlt, FaChartBar, FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const featuresData = {
@@ -7,7 +7,7 @@ const featuresData = {
   items: [
     { icon: FaUserShield, title: "Driver Behavior Analysis", desc: "AI-powered detection of fatigue, distraction, and aggressive driving patterns using edge facial recognition and motion sensors." },
     { icon: FaDesktop, title: "Real-Time Dashboard", desc: "A powerful, unified web-based interface tracking live vehicle locations, real-time driver states, and dynamic safety scores." },
-    { icon: FaSms, title: "Immediate Alerts", desc: "Instant multimedia notifications directly to transport authorities and fleet managers when critical safety violations occur." },
+    { icon: FaTachometerAlt, title: "Safe Speed Prediction", desc: "Estimate safe operating speed from passenger load, weather, and road conditions, then trigger immediate in-cabin warning alerts when thresholds are exceeded." },
     { icon: FaRegFileAlt, title: "Incident Logging", desc: "Precision logging of all safety events, enriched with exact timestamps, GPS coordinates, vehicle telemetry, and visual evidence." },
     { icon: FaChartBar, title: "Predictive Analytics", desc: "Deep historical trend analysis providing actionable insights to pinpoint high-risk routes, recurring issues, and peak incident times." },
     { icon: FaShieldAlt, title: "Automated Safety Scoring", desc: "An objective driver safety scoring engine facilitating performance-based assessments, compliance, and targeted driver training." },

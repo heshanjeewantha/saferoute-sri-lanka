@@ -126,7 +126,7 @@ const ObjectivesSection = () => {
                       className="w-full h-full bg-white rounded-[2.5rem] p-3 sm:p-5 shadow-2xl border border-gray-200/50 relative overflow-hidden flex items-center justify-center group"
                     >
                       <span className="absolute top-8 right-8 text-[11px] font-extrabold text-[#111] tracking-widest z-20 bg-black/50 backdrop-blur-md border border-gray-200/50 px-3 py-1 rounded-full">{activeCase.id}</span>
-                      <img src={activeCase.image} alt={activeCase.title} className="w-full h-full object-cover rounded-[2rem] transition-transform duration-[1.5s] group-hover:scale-105 opacity-80 mix-blend-screen" />
+                      <img src={activeCase.image} alt={activeCase.title} className="w-full h-full object-cover rounded-[2rem] transition-transform duration-[1500ms] group-hover:scale-105 opacity-80 mix-blend-screen" />
                     </motion.div>
                   </AnimatePresence>
                 </div>
