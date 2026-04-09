@@ -1,55 +1,105 @@
-import { ArrowRight, BookOpen } from "lucide-react";
+import { FaArrowRight, FaVideo } from "react-icons/fa";
+import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+
+const heroContent = {
+  title: "Real-Time Safety\nMonitoring System",
+  subtitle: "Trusted by transport operators, safety managers, and public commuters world-wide",
+  buttons: [
+    { label: "CONTACT SALES", link: "#contact", primary: true },
+    { label: "DOWNLOAD BROCHURE", link: "#brochure", primary: false }
+  ],
+  widget: {
+    title: "WATCH VIDEO",
+    subtitle: "How it works",
+    icon: FaVideo
+  }
+};
 
 const HeroSection = () => (
   <section
     id="home"
-    className="relative flex min-h-screen items-center justify-center overflow-hidden"
+    className="relative flex min-h-screen items-center justify-start overflow-hidden bg-white"
   >
-    {/* Background */}
-    <img
-      src={heroBg}
-      alt="Sri Lankan public transport"
-      className="absolute inset-0 h-full w-full object-cover"
-      width={1920}
-      height={1080}
-    />
-    <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-foreground/60" />
-
-    {/* Floating shapes */}
-    <div className="absolute -top-20 -left-20 h-48 w-48 sm:h-72 sm:w-72 rounded-full bg-accent/20 blur-3xl animate-float" />
-    <div className="absolute -bottom-20 -right-20 h-64 w-64 sm:h-96 sm:w-96 rounded-full bg-primary/30 blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
-
-    <div className="container relative z-10 mx-auto px-4 text-center">
-      <p className="animate-fade-up mb-4 inline-block rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 sm:px-5 py-2 text-xs sm:text-sm font-medium text-primary-foreground backdrop-blur-sm">
-        University Research Project
-      </p>
-
-      <h1 className="animate-fade-up animate-fade-up-delay-1 mx-auto max-w-4xl font-display text-3xl font-bold leading-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-6xl">
-        Real-Time Safety Monitoring System for Sri Lanka's Public Transport Network
-      </h1>
-
-      <p className="animate-fade-up animate-fade-up-delay-2 mx-auto mt-4 sm:mt-6 max-w-2xl text-base sm:text-lg text-primary-foreground/80 md:text-xl">
-        Enhancing Passenger Safety Through Intelligent Monitoring
-      </p>
-
-      <div className="animate-fade-up animate-fade-up-delay-3 mt-8 sm:mt-10 flex flex-col items-center justify-center gap-3 sm:gap-4 sm:flex-row">
-        <a
-          href="#about"
-          className="group inline-flex items-center gap-2 rounded-xl bg-accent px-6 sm:px-8 py-3 sm:py-4 font-semibold text-accent-foreground shadow-lg transition-all hover:shadow-accent/30 hover:scale-105"
-        >
-          <BookOpen className="h-5 w-5" />
-          View Research
-        </a>
-        <a
-          href="#system"
-          className="group inline-flex items-center gap-2 rounded-xl border border-primary-foreground/30 bg-primary-foreground/10 px-6 sm:px-8 py-3 sm:py-4 font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/20 hover:scale-105"
-        >
-          Explore System
-          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-        </a>
-      </div>
+    {/* Global full-bleed image container */}
+    <div className="absolute inset-0 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative h-full w-full overflow-hidden"
+      >
+        <img
+          src={heroBg}
+          alt="Sri Lankan public transport"
+          className="absolute inset-0 h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        {/* Soft light gradient matching the image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent" />
+        <div className="absolute inset-0 bg-white/30" /> {/* Extra lightening for text */}
+      </motion.div>
     </div>
+
+    <div className="container relative z-10 mx-auto px-6 lg:px-16 pt-32 pb-24 text-left">
+      <motion.h1 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="max-w-5xl font-display text-[4rem] font-bold leading-[1.05] tracking-[-0.03em] text-[#111] sm:text-[5rem] md:text-[6rem] lg:text-[6.5rem]"
+      >
+        {heroContent.title.split('\n').map((line, i) => (
+          <span key={i} className="block">{line}</span>
+        ))}
+      </motion.h1>
+
+      <motion.p 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="mt-10 max-w-lg text-[17px] text-gray-700 font-medium leading-[1.7]"
+      >
+        {heroContent.subtitle}
+      </motion.p>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="mt-12 flex flex-col sm:flex-row items-center gap-4 border-t border-gray-200/50 pt-10 w-fit pr-10"
+      >
+        {heroContent.buttons.map((btn, idx) => (
+          <a
+            key={idx}
+            href={btn.link}
+            className={`inline-flex items-center justify-center rounded-full px-8 py-4 text-[12px] font-bold uppercase tracking-[0.1em] transition-all hover:scale-105 w-full sm:w-auto ${
+              btn.primary
+                ? "bg-[#ff4b12] text-white shadow-xl shadow-primary/20 hover:bg-[#e04310]"
+                : "bg-white/80 text-[#111] border border-gray-200 hover:bg-gray-50 shadow-sm"
+            }`}
+          >
+            {btn.label}
+          </a>
+        ))}
+      </motion.div>
+    </div>
+
+    {/* Bottom Right Widget like the screenshot */}
+    <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        className="absolute bottom-8 right-8 hidden lg:flex items-center justify-between gap-6 rounded-full bg-white/90 p-3 pr-8 backdrop-blur-2xl border border-gray-200/50 shadow-xl cursor-pointer hover:bg-white transition-all hover:scale-105 group"
+      >
+        <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-[#ff4b12] text-white shadow-lg group-hover:scale-110 transition-transform">
+           <heroContent.widget.icon className="h-6 w-6 text-white ml-1" />
+        </div>
+        <div className="flex flex-col justify-center">
+          <h4 className="font-display text-[13px] font-extrabold text-[#111] tracking-[0.05em] uppercase">{heroContent.widget.title}</h4>
+          <p className="text-[12px] font-medium text-gray-600">{heroContent.widget.subtitle}</p>
+        </div>
+    </motion.div>
   </section>
 );
 
