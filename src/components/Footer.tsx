@@ -2,16 +2,17 @@ import { FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const footerData = {
-  brand: "SafeTransit",
-  description: "A university research project elegantly engineered to enhance public transport safety in Sri Lanka through AI-driven, real-time edge monitoring.",
+  brand: "SafeRoute",
+  description: "A university research project engineering a real-time, AI-driven safety monitoring system for Sri Lanka's public transport network — powered by Edge AI, IoT sensors, and cloud analytics.",
   year: new Date().getFullYear(),
   links: [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Objectives", href: "#objectives" },
-    { label: "System", href: "#system" },
-    { label: "Features", href: "#features" },
-    { label: "Team", href: "#team" },
+    { label: "Home",       href: "#home"       },
+    { label: "Domain",     href: "#domain"     },
+    { label: "Milestones", href: "#milestones" },
+    { label: "Documents",  href: "#documents"  },
+    { label: "Slides",     href: "#slides"     },
+    { label: "About Us",   href: "#team"       },
+    { label: "Contact Us", href: "#contact"    },
   ]
 };
 
@@ -48,7 +49,7 @@ const Footer = () => (
         >
           <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wider">Quick Links</h4>
           <ul className="space-y-4">
-            {footerData.links.slice(0, 3).map(link => (
+            {footerData.links.slice(0, 4).map(link => (
               <li key={link.label}>
                 <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors font-medium">
                   {link.label}
@@ -67,7 +68,7 @@ const Footer = () => (
         >
           <h4 className="font-display text-lg font-bold text-foreground mb-6 uppercase tracking-wider opacity-0 hidden md:block">More Links</h4>
           <ul className="space-y-4">
-            {footerData.links.slice(3).map(link => (
+            {footerData.links.slice(4).map(link => (
               <li key={link.label}>
                 <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors font-medium">
                   {link.label}

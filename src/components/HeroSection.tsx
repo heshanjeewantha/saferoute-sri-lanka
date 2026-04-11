@@ -9,11 +9,11 @@ const heroContent = {
     { label: "CONTACT SALES", link: "#contact", primary: true },
     { label: "DOWNLOAD BROCHURE", link: "#brochure", primary: false }
   ],
-  widget: {
-    title: "WATCH VIDEO",
-    subtitle: "How it works",
-    icon: FaVideo
-  }
+  // widget: {
+  //   title: "WATCH VIDEO",
+  //   subtitle: "How it works",
+  //   icon: FaVideo
+  // }
 };
 
 const HeroSection = () => (
@@ -86,7 +86,7 @@ const HeroSection = () => (
     </div>
 
     {/* Bottom Right Widget like the screenshot */}
-    <motion.div
+    {/* <motion.div
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
@@ -99,7 +99,7 @@ const HeroSection = () => (
           <h4 className="font-display text-[13px] font-extrabold text-[#111] tracking-[0.05em] uppercase">{heroContent.widget.title}</h4>
           <p className="text-[12px] font-medium text-gray-600">{heroContent.widget.subtitle}</p>
         </div>
-    </motion.div>
+    </motion.div> */}
   </section>
 );
 
