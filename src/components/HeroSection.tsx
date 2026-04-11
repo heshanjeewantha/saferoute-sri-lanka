@@ -7,7 +7,7 @@ const heroContent = {
   subtitle: "Trusted by transport operators, safety managers, and public commuters world-wide",
   buttons: [
     { label: "CONTACT SALES", link: "#contact", primary: true },
-    { label: "DOWNLOAD BROCHURE", link: "#brochure", primary: false }
+    // { label: "DOWNLOAD BROCHURE", link: "#brochure", primary: false }
   ],
   // widget: {
   //   title: "WATCH VIDEO",

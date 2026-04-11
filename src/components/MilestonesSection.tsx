@@ -62,7 +62,7 @@ const milestones: Milestone[] = [
   },
   {
     id: "FA",
-    title: "Final Assessment",
+    title: "Final presentation",
     date: "April 2026",
     marks: "Marks Allocated: 30%",
     status: "Upcoming",
