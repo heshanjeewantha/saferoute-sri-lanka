@@ -7,6 +7,7 @@ import {
 import {
   SiTensorflow, SiPython, SiFlutter, SiNodedotjs, SiMongodb,
   SiRaspberrypi, SiOpencv, SiFirebase,
+  SiReact,
 } from "react-icons/si";
 
 const tabs = [
@@ -118,8 +119,7 @@ const tabs = [
         { Icon: SiRaspberrypi, name: "Raspberry Pi 4", category: "Edge Hardware" },
         { Icon: SiOpencv, name: "OpenCV", category: "Computer Vision" },
         { Icon: SiNodedotjs, name: "Node.js", category: "Backend API" },
-        { Icon: SiMongodb, name: "MongoDB", category: "Database" },
-        { Icon: SiFlutter, name: "Flutter", category: "Mobile App" },
+        { Icon: SiReact, name: "React Native", category: "Mobile App" },
         { Icon: SiFirebase, name: "Firebase", category: "Cloud / Auth" },
       ],
     },
