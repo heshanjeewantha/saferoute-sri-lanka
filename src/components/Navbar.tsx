@@ -32,7 +32,7 @@ const Navbar = () => {
         >
           <FaShieldAlt className="h-5 w-5 text-[#ff4b12]" />
           <span className="font-display text-[13px] font-extrabold tracking-[0.12em] text-[#111] uppercase">
-            SafeRoute
+            safeTransit
           </span>
         </a>
 

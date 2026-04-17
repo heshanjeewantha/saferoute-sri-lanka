@@ -2,7 +2,7 @@ import { FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const footerData = {
-  brand: "SafeRoute",
+  brand: "safeTransit",
   description: "A university research project engineering a real-time, AI-driven safety monitoring system for Sri Lanka's public transport network — powered by Edge AI, IoT sensors, and cloud analytics.",
   year: new Date().getFullYear(),
   links: [

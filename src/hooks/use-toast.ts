@@ -31,7 +31,7 @@ type ActionType = typeof actionTypes;
 type Action =
   | {
       type: ActionType["ADD_TOAST"];
-      toast: ToasterToast;
+      toast: ToasterToast;  
     }
   | {
       type: ActionType["UPDATE_TOAST"];

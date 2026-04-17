@@ -28,7 +28,7 @@ const docGroups: DocGroup[] = [
         subtitle: "Formal agreement defining project scope, team roles, and supervisor sign-off.",
         type: "pdf",
         status: "Available",
-        link: "#",
+        link: "https://canva.link/9htjvs5oygdz9gv",
         size: "1.2 MB",
       },
       {
@@ -60,7 +60,7 @@ const docGroups: DocGroup[] = [
         subtitle: "Evaluation checklist for PP1 panel assessment.",
         type: "pdf",
         status: "Available",
-        link: "#",
+        link: "https://canva.link/bmecy6rw27vah7j",
         size: "0.4 MB",
       },
       {

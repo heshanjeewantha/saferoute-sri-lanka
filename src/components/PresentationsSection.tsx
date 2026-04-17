@@ -27,8 +27,8 @@ const presentations: Presentation[] = [
     date: "March 2024",
     slides: "28 Slides",
     status: "Available",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+    link: "https://canva.link/9htjvs5oygdz9gv",
+    thumbnail: "src/assets/proposalprese.png",
     tags: ["Problem Statement", "Methodology", "Project Plan"],
   },
   {
@@ -39,8 +39,8 @@ const presentations: Presentation[] = [
     date: "June 2024",
     slides: "34 Slides",
     status: "Available",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    link: "https://canva.link/bmecy6rw27vah7j",
+    thumbnail: "src/assets/pp1_thum.png",
     tags: ["CNN Results", "Edge Prototype", "System Architecture"],
   },
   {
@@ -51,8 +51,8 @@ const presentations: Presentation[] = [
     date: "September 2024",
     slides: "41 Slides",
     status: "Available",
-    link: "#",
-    thumbnail: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80",
+    link: "https://canva.link/2dd45qu3rsz7zgm",
+    thumbnail: "src/assets/pp21.png",
     tags: ["End-to-End Demo", "Live Dashboard", "Accuracy Results"],
   },
   {

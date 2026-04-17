@@ -98,11 +98,11 @@ const tabs = [
     content: {
       heading: "Methodology",
       steps: [
-        { phase: "Phase 1", title: "Data Collection & Annotation", desc: "Deploy prototype devices on 5 SLTB buses; collect 200+ hours of driver video, GPS tracks, and accelerometer logs. Annotate for drowsiness, phone use, and over-speed events." },
+        { phase: "Phase 1", title: "Data Collection & Annotation", desc: "collect  GPS tracks, and accelerometer logs. Annotate for drowsiness, phone use, and over-speed events." },
         { phase: "Phase 2", title: "Model Development", desc: "Train CNN models (MobileNetV3) for driver monitoring and LSTM networks for temporal anomaly detection; optimize for Raspberry Pi 4 deployment via TFLite quantization." },
         { phase: "Phase 3", title: "Edge Integration", desc: "Package models into a Docker-based edge runtime on Raspberry Pi 4 + Coral TPU; implement MQTT-based telemetry pipeline to the central cloud server." },
         { phase: "Phase 4", title: "Dashboard & Alerting", desc: "Build the Fleet Ops Dashboard using React + Node.js, integrating live WebSocket alerts, Leaflet.js geo-maps, and Recharts analytics." },
-        { phase: "Phase 5", title: "Evaluation & Testing", desc: "Conduct a 6-week pilot on live routes; measure detection accuracy, alert latency, false-positive rates, and driver score delta against baseline." },
+        { phase: "Phase 5", title: "Evaluation & Testing", desc: " measure detection accuracy, alert latency, false-positive rates, and driver score delta against baseline." },
       ],
     },
   },
@@ -145,7 +145,7 @@ const DomainSection = () => {
             </h2>
             <p className="mt-4 text-[17px] font-medium leading-[1.8] text-gray-500 max-w-2xl">
               Explore the academic foundation, identified gaps, problem statement, objectives,
-              methodology, and technology stack powering SafeRoute Sri Lanka.
+              methodology, and technology stack powering safeTransit Sri Lanka.
             </p>
 
             {/* Tab Bar */}
