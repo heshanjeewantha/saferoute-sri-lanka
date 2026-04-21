@@ -3,25 +3,25 @@ import { FaGraduationCap, FaAward, FaLinkedin, FaEnvelope } from "react-icons/fa
 const teamData = {
   members: [
     { 
-      name: "A.M.S.S Abeykoon", 
+      name: "Sandarau Abeykoon", 
       role: "Researcher", 
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIklI4-UCjA95C7XBS8yNErsEEW6cEkAakYg&s",
+      image: "src/assets/sandaru.png",
       email: "mailto:it22592156@my.sliit.lk"
     },
     { 
-      name: "Samarakoon S.M.J.B", 
+      name: "Jayaisuru Bandara", 
       role: "Researcher", 
-      image: "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/480926415_1678764509408963_7863278183128774286_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=53a332&_nc_ohc=g--ynZtAvrwQ7kNvwGrqgyB&_nc_oc=Adp3uw92hGkfjx971joqIdKZB1J6S3pY0S68fUwU0jMjfmWnZRcOVfaKROl6W_wn3GM&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=BPyiKb_JUr97-siGMwCt0Q&_nc_ss=7a3a8&oh=00_Af3sS5PKsioUMtf3e8Yh1ESmmUVOof8_t8nsY0LowmnZ4A&oe=69E00FFB",
+      image: "src/assets/jayaisuru.jpeg",
       email: "mailto:it22569486@my.sliit.lk"
     },
     { 
-      name: "Marasinghe M A S K", 
+      name: " Sachith Kavishka ", 
       role: "Researcher", 
-      image: "https://media.licdn.com/dms/image/v2/D5603AQE0KOxxlMXgkg/profile-displayphoto-shrink_400_400/B56ZcFhgnNGoAg-/0/1748144361392?e=2147483647&v=beta&t=0u7cFq5wvnBIRFVa4SvTMpSc21IxZbX4eznyvZ3ntBc",
+      image: "src/assets/sachith.png",
       email: "mailto:it22579768@my.sliit.lk"
     },
     { 
-      name: "Premathilaka I H J", 
+      name: " Heshan Jeewantha ", 
       role: "Researcher", 
       image: "src/assets/heshan.png",
       email: "mailto:it22578532@my.sliit.lk"
@@ -29,15 +29,15 @@ const teamData = {
   ],
   supervisors: [
     { 
-      name: "Shayamalee Rajapaksha", 
+      name: "Thisara Shyamalee", 
       role: "Supervisor", 
-      image: "https://static.sliit.lk/profile/thisaras-1713715613.jpg",
+      image: "src/assets/thisara_madam.png",
       linkedin: "https://www.linkedin.com/in/thisara-shyamalee-8b5877193/"
     },
     { 
       name: "Kaushalaya Rajapaksha", 
       role: "Co-Supervisor", 
-      image: "https://media.licdn.com/dms/image/v2/D5603AQEDEpS8OvRjQQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1681099803529?e=2147483647&v=beta&t=JI2tckKN8ZQkviMAPwT63FirYgIxjWqRyijAHDAQsnA",
+      image: "src/assets/kaushalaya madam.jpg",
       linkedin: "https://www.linkedin.com/in/kaushalya-rajapakse/"
     },
   ]

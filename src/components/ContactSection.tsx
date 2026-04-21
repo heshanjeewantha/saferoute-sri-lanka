@@ -1,13 +1,50 @@
 import { useState } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your message! We'll get back to you soon.");
-    setForm({ name: "", email: "", message: "" });
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus("error");
+      alert("Email service is not configured yet. Please set EmailJS environment variables.");
+      return;
+    }
+
+    setIsSending(true);
+    setStatus("idle");
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        {
+          publicKey,
+        },
+      );
+
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
+    } catch {
+      setStatus("error");
+      alert("Failed to send message. Please try again in a moment.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -69,11 +106,20 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
+              disabled={isSending}
               className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-all hover:opacity-90 hover:scale-[1.02]"
             >
               <Send className="h-4 w-4" />
-              Send Message
+              {isSending ? "Sending..." : "Send Message"}
             </button>
+
+            {status === "success" && (
+              <p className="mt-4 text-sm text-green-600">Message sent successfully. Thank you!</p>
+            )}
+
+            {status === "error" && (
+              <p className="mt-4 text-sm text-red-600">Unable to send message right now.</p>
+            )}
           </form>
 
           {/* Info */}
