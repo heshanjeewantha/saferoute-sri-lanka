@@ -8,6 +8,7 @@ import TeamSection from "@/components/TeamSection";
 import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -21,6 +22,7 @@ const Index = () => (
     <GallerySection />
     <ContactSection />
     <Footer />
+    <Toaster />
   </div>
 );
 

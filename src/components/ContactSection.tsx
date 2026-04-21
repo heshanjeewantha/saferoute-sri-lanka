@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Mail, MapPin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
+  const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isSending, setIsSending] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -15,33 +16,44 @@ const ContactSection = () => {
     e.preventDefault();
 
     if (!serviceId || !templateId || !publicKey) {
-      setStatus("error");
-      alert("Email service is not configured yet. Please set EmailJS environment variables.");
+      toast({
+        variant: "destructive",
+        title: "Not configured",
+        description: "Email service is not set up. Please check environment variables.",
+      });
       return;
     }
 
     setIsSending(true);
-    setStatus("idle");
 
     try {
       await emailjs.send(
         serviceId,
         templateId,
         {
-          from_name: form.name,
-          from_email: form.email,
-          message: form.message,
+          name: form.name,
+          email: form.email,
+          title: form.message,   // template uses {{title}} for the message body
         },
         {
           publicKey,
         },
       );
 
-      setStatus("success");
       setForm({ name: "", email: "", message: "" });
-    } catch {
-      setStatus("error");
-      alert("Failed to send message. Please try again in a moment.");
+      toast({
+        variant: "success",
+        title: "Message sent! 🎉",
+        description: "Thanks for reaching out. We'll get back to you soon.",
+      });
+    } catch (err: unknown) {
+      const ejsErr = err as { status?: number; text?: string };
+      console.error("[EmailJS] Send error — status:", ejsErr?.status, "| text:", ejsErr?.text);
+      toast({
+        variant: "destructive",
+        title: "Failed to send",
+        description: ejsErr?.text ?? "Something went wrong. Please try again.",
+      });
     } finally {
       setIsSending(false);
     }
@@ -113,13 +125,7 @@ const ContactSection = () => {
               {isSending ? "Sending..." : "Send Message"}
             </button>
 
-            {status === "success" && (
-              <p className="mt-4 text-sm text-green-600">Message sent successfully. Thank you!</p>
-            )}
 
-            {status === "error" && (
-              <p className="mt-4 text-sm text-red-600">Unable to send message right now.</p>
-            )}
           </form>
 
           {/* Info */}
@@ -129,7 +135,7 @@ const ContactSection = () => {
                 <Mail className="h-6 w-6" />
               </div>
               <h3 className="mb-1 font-display font-semibold text-card-foreground">Email</h3>
-              <p className="text-sm text-muted-foreground">research@safetransit.lk</p>
+              <p className="text-sm text-muted-foreground">safetransit360@gmail.com</p>
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
