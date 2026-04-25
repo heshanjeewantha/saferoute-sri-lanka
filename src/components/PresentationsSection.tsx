@@ -24,7 +24,7 @@ const presentations: Presentation[] = [
     title: "Proposal Presentation",
     subtitle:
       "Initial research pitch covering the problem domain, proposed solution, preliminary literature review, and project plan.",
-    date: "March 2024",
+    date: "September 2025",
     slides: "28 Slides",
     status: "Available",
     link: "https://canva.link/9htjvs5oygdz9gv",
@@ -36,7 +36,7 @@ const presentations: Presentation[] = [
     title: "Progress Presentation 1",
     subtitle:
       "Showcase of completed literature survey, finalized architecture, preliminary CNN model results, and hardware prototype demonstration.",
-    date: "June 2024",
+    date: "January 2026",
     slides: "34 Slides",
     status: "Available",
     link: "https://canva.link/bmecy6rw27vah7j",
@@ -48,7 +48,7 @@ const presentations: Presentation[] = [
     title: "Progress Presentation 2",
     subtitle:
       "Demonstration of the fully integrated system: on-board driver monitoring, GPS enforcement, and live dashboard beta with real data.",
-    date: "September 2024",
+    date: "March 2026",
     slides: "41 Slides",
     status: "Available",
     link: "https://canva.link/2dd45qu3rsz7zgm",
@@ -60,7 +60,7 @@ const presentations: Presentation[] = [
     title: "Final Presentation",
     subtitle:
       "Complete research presentation: evaluated system performance, pilot results from live bus routes, conclusions, and future work.",
-    date: "November 2024",
+    date: "May 2026",
     slides: "TBD",
     status: "Upcoming",
     thumbnail: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",

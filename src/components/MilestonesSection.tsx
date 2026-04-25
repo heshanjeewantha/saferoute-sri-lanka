@@ -63,7 +63,7 @@ const milestones: Milestone[] = [
   {
     id: "FA",
     title: "Final presentation",
-    date: "April 2026",
+    date: "May 2026",
     marks: "Marks Allocated: 30%",
     status: "Upcoming",
     description:
@@ -78,7 +78,7 @@ const milestones: Milestone[] = [
   {
     id: "VV",
     title: "Viva",
-    date: "April 2026",
+    date: "May 2026",
     marks: "Marks Allocated: 10%",
     status: "Pending",
     description:
@@ -155,9 +155,11 @@ const MilestonesSection = () => {
                       <div className={`absolute left-0 top-6 h-10 w-10 rounded-full border-2 hidden sm:flex items-center justify-center shadow-md z-10 ${
                         m.status === "Completed" ? "bg-[#ff4b12] border-[#ff4b12] text-white" :
                         m.status === "Upcoming"  ? "bg-amber-400 border-amber-400 text-white" :
-                                                   "bg-white border-gray-300 text-gray-400"
+                                                   "bg-teal-400 border-teal-300 text-white"
                       }`}>
-                        {m.status === "Completed" ? <FaTrophy className="text-sm" /> : <span className="text-[11px] font-black">{String(idx + 1).padStart(2,"0")}</span>}
+                        {m.status === "Completed" ? <FaTrophy className="text-sm" /> : <span className="text-[11px] font-black"></span>}
+                        {m.status === "Upcoming" ? <FaTrophy className="text-sm" /> : <span className="text-[11px] font-black"></span>}
+                        {m.status === "Pending" ? <FaTrophy className="text-sm" /> : <span className="text-[11px] font-black"></span>}
                       </div>
 
                       {/* Card */}
