@@ -67,7 +67,7 @@ const docGroups: DocGroup[] = [
         subtitle: "Individual component : GPS-based speed zone enforcement and route compliance.",
         type: "pdf",
         status: "Available",
-        link: "/it22592156.pdf",
+        link: "/IT22592156.pdf",
         size: "2mb",
       },
       {
