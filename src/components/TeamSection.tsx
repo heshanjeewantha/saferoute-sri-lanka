@@ -5,25 +5,25 @@ const teamData = {
     { 
       name: "Sandarau Abeykoon", 
       role: "Researcher", 
-      image: "src/assets/sandaru.png",
+      image: "/sandaru.png",
       email: "mailto:it22592156@my.sliit.lk"
     },
     { 
       name: "Jayaisuru Bandara", 
       role: "Researcher", 
-      image: "src/assets/jayaisuru.jpeg",
+      image: "/jayaisuru.jpeg",
       email: "mailto:it22569486@my.sliit.lk"
     },
     { 
       name: " Sachith Kavishka ", 
       role: "Researcher", 
-      image: "src/assets/sachith.png",
+      image: "/sachith.png",
       email: "mailto:it22579768@my.sliit.lk"
     },
     { 
       name: " Heshan Jeewantha ", 
       role: "Researcher", 
-      image: "src/assets/heshan.png",
+      image: "/heshan.png",
       email: "mailto:it22578532@my.sliit.lk"
     },
   ],
@@ -31,13 +31,13 @@ const teamData = {
     { 
       name: "Thisara Shyamalee", 
       role: "Supervisor", 
-      image: "src/assets/thisara_madam.png",
+      image: "/thisara_madam.png",
       linkedin: "https://www.linkedin.com/in/thisara-shyamalee-8b5877193/"
     },
     { 
       name: "Kaushalaya Rajapaksha", 
       role: "Co-Supervisor", 
-      image: "src/assets/kaushalaya madam.jpg",
+      image: "/kaushalaya-madam.jpg",
       linkedin: "https://www.linkedin.com/in/kaushalya-rajapakse/"
     },
   ]

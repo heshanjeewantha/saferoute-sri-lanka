@@ -29,7 +29,7 @@ const docGroups: DocGroup[] = [
         type: "pdf",
         status: "Available",
         size: "2mb",
-        link: "/src/assets/TAF_25-26J-499.pdf",
+        link: "/TAF_25-26J-499.pdf",
       },
       
     ],
@@ -43,7 +43,7 @@ const docGroups: DocGroup[] = [
         subtitle: "Real-Time Safety Monitoring System for Public Transport: An AI-Driven Approach",
         type: "pdf",
         status: "Available",
-        link: "/src/assets/SafeTransit360_IEEE_Final.pdf",
+        link: "/SafeTransit360_IEEE_Final.pdf",
         size: "2mb",
       },
     
@@ -58,7 +58,7 @@ const docGroups: DocGroup[] = [
         subtitle: "Individual component : CNN-based driver drowsiness and distraction detection.",
         type: "pdf",
         status: "Available",
-        link: "/src/assets/it22578532.pdf",
+        link: "/it22578532.pdf",
         size: "2mb",
       },
       {
@@ -67,7 +67,7 @@ const docGroups: DocGroup[] = [
         subtitle: "Individual component : GPS-based speed zone enforcement and route compliance.",
         type: "pdf",
         status: "Available",
-        link: "/src/assets/it22592156.pdf",
+        link: "/it22592156.pdf",
         size: "2mb",
       },
       {
@@ -76,7 +76,7 @@ const docGroups: DocGroup[] = [
         subtitle: "Individual component : LSTM-based arrival prediction and anomaly detection.",
         type: "pdf",
         status: "Available",
-        link: "/src/assets/It22569486.pdf",
+        link: "/IT22569486.pdf",
         size: "2mb",
       },
       {
@@ -85,13 +85,12 @@ const docGroups: DocGroup[] = [
         subtitle: "Individual component : Accelerometer fusion for road-specific speed thresholds.",
         type: "pdf",
         status: "Available",
-        link: "/src/assets/IT22579768.pdf",
+        link: "/IT22579768.pdf",
         size: "2mb",
       },
     ],
   },
   // {
-  //   category: "Check List Documents",
   //   docs: [
   //     {
   //       id: "checklist-pp",
@@ -100,7 +99,6 @@ const docGroups: DocGroup[] = [
   //       type: "pdf",
   //       status: "Available",
   //       link: "#",
-  //       size: "0.4 MB",
   //     },
   //     {
   //       id: "checklist-p1",
