@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { FaShieldAlt, FaBars, FaTimes } from "react-icons/fa";
+import SearchBar from "./SearchBar";
 
 const navLinks = [
   { href: "#home",       label: "Home"      },
@@ -14,11 +15,25 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const searchRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Ctrl+K / Cmd+K shortcut to focus search
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        const input = document.getElementById("global-search-input") as HTMLInputElement | null;
+        input?.focus();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
   }, []);
 
   return (
@@ -52,14 +67,19 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Right: Contact CTA + mobile toggle */}
+        {/* Right: Search + Contact CTA + mobile toggle */}
         <div className="flex items-center gap-3 z-10 shrink-0">
-          <a
+          {/* Desktop search bar */}
+          <div className="hidden lg:block">
+            <SearchBar />
+          </div>
+
+          {/* <a
             href="#contact"
             className="hidden sm:inline-flex rounded-full bg-[#ff4b12] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-lg transition-all hover:bg-[#e04310] hover:scale-105"
           >
             Contact Us
-          </a>
+          </a> */}
           <button
             id="navbar-mobile-toggle"
             aria-label="Toggle menu"
@@ -74,7 +94,11 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="mx-auto mt-4 max-w-6xl overflow-hidden rounded-[2rem] bg-white/95 backdrop-blur-3xl shadow-xl lg:hidden border border-gray-100">
-          <ul className="flex flex-col p-4">
+          {/* Mobile search */}
+          <div className="px-4 pt-4 pb-2">
+            <SearchBar onClose={() => setIsOpen(false)} />
+          </div>
+          <ul className="flex flex-col p-4 pt-2">
             {navLinks.map((l) => (
               <li key={l.href}>
                 <a
