@@ -27,7 +27,7 @@ const presentations: Presentation[] = [
     date: "September 2025",
     slides: "28 Slides",
     status: "Available",
-    link: "https://canva.link/9htjvs5oygdz9gv",
+    link: "https://www.canva.com/design/DAHIn94_6a4/98Docw6EOFcLQ4wU05mcnA/view?utm_content=DAHIn94_6a4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0344f8ea5d",
     thumbnail: "/proposalprese.png",
     tags: ["Problem Statement", "Methodology", "Project Plan"],
   },
@@ -37,7 +37,7 @@ const presentations: Presentation[] = [
     subtitle:
       "Showcase of completed literature survey, finalized architecture, preliminary CNN model results, and hardware prototype demonstration.",
     date: "January 2026",
-    slides: "34 Slides",
+    slides: "15 Slides",
     status: "Available",
     link: "https://canva.link/bmecy6rw27vah7j",
     thumbnail: "/pp1_thum.png",
@@ -49,7 +49,7 @@ const presentations: Presentation[] = [
     subtitle:
       "Demonstration of the fully integrated system: on-board driver monitoring, GPS enforcement, and live dashboard beta with real data.",
     date: "March 2026",
-    slides: "41 Slides",
+    slides: "15 Slides",
     status: "Available",
     link: "https://canva.link/2dd45qu3rsz7zgm",
     thumbnail: "/pp21.png",
@@ -61,9 +61,10 @@ const presentations: Presentation[] = [
     subtitle:
       "Complete research presentation: evaluated system performance, pilot results from live bus routes, conclusions, and future work.",
     date: "May 2026",
-    slides: "TBD",
-    status: "Upcoming",
-    thumbnail: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    slides: "15 Slides",
+    status: "Available",
+    link:"https://www.canva.com/design/DAHIn94_6a4/98Docw6EOFcLQ4wU05mcnA/view?utm_content=DAHIn94_6a4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0344f8ea5d",
+    thumbnail: "/pp22.jpeg",
     tags: ["Final Evaluation", "Pilot Results", "Conclusions"],
   },
 ];

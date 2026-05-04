@@ -90,7 +90,7 @@ const TeamSection = () => (
             <div className="mb-6 h-32 w-32 overflow-hidden rounded-full ring-4 ring-primary/20 transition-transform duration-500 group-hover:scale-105">
               <img src={s.image} alt={s.name} className="h-full w-full object-cover" />
             </div>
-            <h3 className="font-display text-xl font-bold text-foreground group-hover:text-primary transition-colors">{s.name}</h3>
+            <h3 className="font-display text-base sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors text-center break-words w-full">{s.name}</h3>
             <p className="mt-2 flex items-center gap-2 text-sm font-semibold text-primary">
               <FaAward className="text-primary" />
               {s.role}
